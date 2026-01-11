@@ -1,7 +1,19 @@
 [project]
-name = "sam-audio"
+name = "sam-audio-worker"
 version = "0.1.0"
-description = "Add your description here"
+description = "RunPod Serverless Worker for SAM Audio"
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = []
+requires-python = ">=3.11"
+dependencies = [
+    "runpod",
+    "torch>=2.0.0",
+    "torchaudio>=2.0.0",
+    "transformers>=4.30.0",
+    "accelerate",
+    "scipy",
+    "requests",
+    "sam-audio @ git+https://github.com/facebookresearch/sam-audio.git"
+]
+
+[tool.uv]
+package = true

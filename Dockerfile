@@ -1,20 +1,18 @@
-
-FROM runpod/pytorch:2.2.0-py3.10-cuda12.1.1-devel-ubuntu22.04
+FROM runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04
 
 WORKDIR /app
 
-# Install system dependencies
-# ffmpeg is usually needed for audio processing
 RUN apt-get update && apt-get install -y \
     ffmpeg \
     git \
+    libsndfile1 \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements first to leverage caching
-COPY requirements.txt .
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+COPY pyproject.toml .
+
+RUN uv pip install --system --no-cache -r pyproject.toml
 
 # Copy application code
 COPY handler.py .

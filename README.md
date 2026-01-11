@@ -4,6 +4,8 @@ This repository contains a RunPod serverless worker for [SAM Audio](https://gith
 
 It implements the **Full** version of the model, supporting all modalities including text descriptions and temporal anchors (span prompting).
 
+[![Runpod](https://api.runpod.io/badge/Jourdelune/sam-audio)](https://console.runpod.io/hub/Jourdelune/sam-audio)
+
 ## Features
 
 - **Text Prompting**: Isolate sounds using natural language descriptions.

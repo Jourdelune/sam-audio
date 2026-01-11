@@ -3,8 +3,8 @@
     {
       "name": "basic_separation",
       "input": {
-        "audio_url": "https://www2.cs.uic.edu/~i101/SoundFiles/BabyElephantWalk60.wav",
-        "description": "music"
+        "audio_url": "https://cdn.sonauto.ai/generations2/audio_899b5eab-4c38-43d9-9121-eb12c2476b33_1.ogg",
+        "description": "voice"
       },
       "timeout": 60000
     }

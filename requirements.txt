@@ -1,0 +1,9 @@
+runpod
+torch>=2.0.0
+torchaudio>=2.0.0
+transformers>=4.30.0
+accelerate
+scipy
+requests
+# Install SAM Audio from source (adjust URL if official repo differs)
+git+https://github.com/facebookresearch/sam-audio.git

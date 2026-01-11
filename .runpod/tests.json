@@ -1,0 +1,22 @@
+{
+  "tests": [
+    {
+      "name": "basic_separation",
+      "input": {
+        "audio_url": "https://www2.cs.uic.edu/~i101/SoundFiles/BabyElephantWalk60.wav",
+        "description": "music"
+      },
+      "timeout": 60000
+    }
+  ],
+  "config": {
+    "gpuTypeId": "NVIDIA GeForce RTX 4090",
+    "gpuCount": 1,
+    "env": [
+      {
+        "key": "MODEL_NAME",
+        "value": "facebook/sam-audio-base"
+      }
+    ]
+  }
+}
